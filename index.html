@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+	
+	<style>
+		body {
+			background-color: #C0C0C0;
+			font-family: Impact;
+			text-align: center;
+			}
+		h1 {
+			margin: 0;
+			padding-top: 0;
+			color: #B22222;
+			font-size: 90px;
+			}
+		h3 {
+			margin: 24;
+			font-size: 36px;
+			color: #000080;
+			}
+		a {
+			margin: 20;
+			color: #000080;
+			font-size: 20px;
+			}
+		a:visited { 
+			COLOR: red; 
+			}
+		.clock {
+			color: #B22222;
+			font-size: 90px;
+			letter-spacing: 7px;
+			}
+		.dropdown {
+			position: relative;
+			display: inline-block;
+			}
+
+		.dropdown-content {
+			display: none;
+			position: absolute;
+			min-width: 160px;
+			padding: 12px 16px;
+			z-index: 1;
+			}
+
+		.dropdown:hover .dropdown-content {
+			display: block;
+			}
+	</style>
+	
+		<link 
+			rel="icon" 
+			type="image/png" 
+			href="https://i.pinimg.com/originals/0d/c8/df/0dc8df1341759d0a120187a0bd51ef4d.jpg" 
+		/>
+		<title>
+			League of Valhalla
+		</title>
+		<body>
+		<div
+			id="resize"
+			class="size">
+		
+		<h1>
+			League of Valhalla
+		</h1>
+		<h3>
+			Welcome to League of Valhalla!
+			Please Click Server Invite Link Below
+		</h3>
+		<iframe 
+			src="https://discordapp.com/widget?id=532702532284186635&theme=dark" 
+			width="350" 
+			height="500" 
+			allowtransparency="true" 
+			frameborder="0">
+		</iframe>
+		</br>
+		<p>
+		<div class="dropdown">
+			<span>
+			<a
+				href="https://discord.gg/vjkBkbQ">
+				Link to Server
+			</a>
+			<div class="dropdown-content">
+			<p>https://discord.gg/vjkBkbQ</p>
+			</span>
+			</div>
+		</p>
+<!--
+			<div 
+			id="ClockDisplay" 
+			class="clock">
+		</div>
+-->		
+		</div>
+		
+		
+		<script>	
+			function showTime(){
+				var date = new Date();
+				var h = date.getHours(); 
+				var m = date.getMinutes(); 
+				var s = date.getSeconds(); 
+				var session = "AM";
+    
+			if(h == 0){
+				h = 12;
+			}
+    
+			if(h > 12){
+				h = h - 12;
+				session = "PM";
+			}
+		
+			h = (h < 10) ? "0" + h : h;
+			m = (m < 10) ? "0" + m : m;
+			s = (s < 10) ? "0" + s : s;
+    
+			var time = h + ":" + m + ":" + s + " " + session;
+			document.getElementById("ClockDisplay").innerText = time;
+			document.getElementById("ClockDisplay").textContent = time;
+    
+			setTimeout(showTime, 1000);
+    
+			}
+			showTime();
+		</script>
+		
+		<script type="text/javascript"> 
+			function TableHeight() 
+			{
+				if (typeof (window.innerWidth) == 'number') 
+				{
+				//Non-IE 
+					myWidth = window.innerWidth;
+					myHeight = window.innerHeight;
+				}
+					else if (document.documentElement && (document.documentElement.clientWidth || document.documentElement.clientHeight)) 
+					{
+					//IE 6+ in 'standards compliant mode' 
+						myWidth = document.documentElement.clientWidth;
+						myHeight = document.documentElement.clientHeight;
+					}
+					else if (document.body && (document.body.clientWidth || document.body.clientHeight)) 
+					{
+					//IE 4 compatible 
+						myWidth = document.body.clientWidth;
+						myHeight = document.body.clientHeight;
+					}
+						document.getElementById("resize").style.height = (myHeight - 140) + 'px';
+					}
+</script>
+		</body>			
+</html>
